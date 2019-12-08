@@ -1,0 +1,18 @@
+{% extends "base.html" %} 
+{% block content %}
+    <div class="section-tutorials-lang">
+    {% for page in section.pages %}
+        <div class="page">
+            <div class="header">
+                <div class="poster-container">
+                    <div class="poster-container-inner">
+                        <a href="{{ page.permalink }}">
+                            <p class="poster" class="title">{{ page.title }}</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    {% endfor %}
+    </div>
+{% endblock content %}

@@ -1,0 +1,196 @@
+/***********
+ * General *
+ ***********/
+
+body {
+    font-family: "Open Sans", Helvetica, Arial, sans-serif;
+    margin: 0;
+}
+
+body > .header .title,
+body > .content {
+    padding: 2rem 1rem 2rem 1rem;
+}
+
+a {
+    text-decoration: none;
+}
+
+body > .content {
+    max-width: 960px;
+    margin: 0 auto;
+    color: #333;
+}
+
+body > .footer {
+    background: #2c3e50;
+    padding: 1rem;
+}
+
+body > .footer p {
+    max-width: 960px;
+    margin: 0 auto;
+    color: #f7f7f7;
+}
+
+/********
+ * Logo *
+ ********/
+
+body > .header {
+    background: #2c3e50;
+}
+
+body > .header .title {
+    margin: 0 auto 0 auto;
+    max-width: 960px;
+}
+
+body > .header .title a {
+    color: #dfdfdf;
+}
+
+body > .header .title small {
+    color: #dfdfdf;
+    font-size: .75rem;
+    display: block;
+}
+
+/******************
+ * Navigation bar *
+ ******************/
+
+.nav {
+    border-top: 1px solid #e0e0e0;
+    border-bottom: 1px solid #e0e0e0;
+    padding: 0 1rem 0 1rem;
+    box-shadow: #f7f7f7 0 4px 4px;
+}
+
+.nav .list {
+    padding: 0;
+    max-width: 960px;
+    margin: 0 auto;
+    list-style-type: none;
+    font-size: 0;
+}
+
+.nav .list .item {
+    list-style: none;
+    display: inline-block;
+    font-size: 1rem;
+}
+
+.nav .list .item .link {
+    display: inline-block;
+    color: #2c3e50;
+    padding: 1rem;
+    margin: 0;
+    background: #fff;
+}
+
+.nav .list .item .link:hover {
+    background: #f7f7f7;
+}
+
+/*************
+ * Section *
+ *************/
+
+/* Tutorials */
+
+.section-tutorials {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.section-tutorials.section .header {
+    margin: 1rem;
+    padding: 2rem;
+    background: #fff;
+    text-align: center;
+    box-shadow: 0 0 8px #ddd;
+    transition: box-shadow .2s ease;
+}
+
+.section-tutorials.section .header:hover {
+    box-shadow: 0 0 8px #ccc;
+}
+
+.section-tutorials .page .header .poster {
+    width: 240px;
+    border: 1px solid #555;
+}
+
+/* Lang */
+
+.section-tutorials-lang {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 1rem;
+}
+
+.section-tutorials-lang.section .header {
+    margin: 1rem;
+    padding: 2rem;
+    text-align: center;
+    box-shadow: 0 0 8px #ddd;
+    transition: box-shadow .2s ease;
+}
+
+.section-tutorials-lang.section .header:hover {
+    box-shadow: 0 0 8px #ccc;
+}
+
+.section-tutorials-lang .page .header .poster-container .poster {
+    display: table-cell;
+    vertical-align: middle;
+    background: #EFF0FF;
+}
+
+.section-tutorials-lang .page .header .poster {
+    width: 240px;
+    height: 160px;
+    border: 1px solid #555;
+    text-align: center;
+    color: #111;
+}
+
+/********
+ * Post *
+ ********/
+
+.post .header .date {
+    color: #bbb;
+    font-weight: bold;
+    font-size: .75rem;
+    text-transform: uppercase;
+}
+
+.post .header .title {
+    font-size: 2rem;
+    font-weight: bold;
+    display: inline-block;
+}
+
+.post .header .title a {
+    color: #2c3e50;
+}
+
+.post .content {
+    line-height: 1.75rem;
+}
+
+.post .content h2 {
+    margin-top: 3rem;
+}
+
+.post .content a {
+    font-weight: bold;
+}
+
+.post .content pre {
+    line-height: 1rem;
+    padding: 1rem;
+    overflow-x: auto;
+}

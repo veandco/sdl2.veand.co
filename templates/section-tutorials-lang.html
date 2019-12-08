@@ -1,0 +1,16 @@
+{% extends "base.html" %} 
+{% block content %}
+    <div class="section-tutorials">
+    {% for subsection_name in section.subsections %}
+        <div class="page">
+            {% set subsection = get_section(path=subsection_name) %}
+            <a href="{{ subsection.permalink }}">
+                <div class="header">
+                    <img class="poster" src="/images/{{ section.path }}{{ subsection.title | slugify }}.png" />
+                    <p class="title">{{ subsection.title }}</p>
+                </div>
+            </a>
+        </div>
+    {% endfor %}
+    </div>
+{% endblock content %}

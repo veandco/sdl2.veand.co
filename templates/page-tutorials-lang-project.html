@@ -1,0 +1,25 @@
+{% extends "base.html" %} 
+{% block content %}
+    <div class="post">
+        <div class="header">
+            <div class="title">
+                <a href="{{ page.permalink }}">{{ page.title }}</a>
+            </div>
+        </div>
+        <div class="content">
+            {{ page.content | safe }}
+
+            {% if page.lighter %}
+            <div>
+                <a href="{{ page.lighter.permalink }}">Previous: {{ page.lighter.title }}</a>
+            </div>
+            {% endif %}
+
+            {% if page.heavier %}
+            <div>
+                <a href="{{ page.heavier.permalink }}">Next: {{ page.heavier.title }}</a>
+            </div>
+            {% endif %}
+        </div>
+    </div>
+{% endblock content %}
