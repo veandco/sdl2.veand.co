@@ -207,6 +207,30 @@ body > .header .title small {
     color: #111;
 }
 
+/* Resources */
+
+.section-resources {
+	line-height: 1.5rem;
+}
+
+.section-resources.section .header {
+    margin: 1rem;
+    padding: 2rem;
+    background: #fff;
+    text-align: center;
+    box-shadow: 0 0 8px #ddd;
+    transition: box-shadow .2s ease;
+}
+
+.section-resources.section .header:hover {
+    box-shadow: 0 0 8px #ccc;
+}
+
+.section-resources .page .header .poster {
+    width: 240px;
+    border: 1px solid #555;
+}
+
 /********
  * Post *
  ********/
