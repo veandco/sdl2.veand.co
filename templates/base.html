@@ -14,12 +14,16 @@
             <small class="subtitle">Website is still under development. Final content and looks might change drastically!</small>
         </h1>
     </div>
-    <div class="nav">
+    <nav class="nav" role="navigation" aria-label="main">
         <ul class="list">
             <li class="item"><a class="link" href="/">Home</a></li>
-            <li class="item"><a class="link" href="/tutorials">Tutorials</a></li>
+            <li class="item"><a class="link" href="/tutorials">Tutorials</a>
+		    <ul class="list dropdown">
+			    <li class="item"><a class="link" href="/tutorials/go">Go</a></li>
+		    </ul>
+	    </li>
         </ul>
-    </div>
+    </nav>
     <div class="content">
     {% block content %}{% endblock content %}
     </div>
