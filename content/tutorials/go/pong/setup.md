@@ -13,7 +13,7 @@ Welcome to an SDL2 tutorial for Go! The goal of this tutorial is to provide a qu
 
 ## Preparation
 
-Let's first set up our working directory. Then, download the assets [here](/assets/tutorials/go/pong/assets.zip) and extract the content into the working directory. Credits to [Pixel Kitchen](https://www.fontspace.com/pixel-kitchen) for the [Satella Font](https://www.fontspace.com/satella-font-f40960) and [captaincrunch80](https://opengameart.org/users/captaincrunch80) for the [Pong sounds](https://opengameart.org/content/3-ping-pong-sounds-8-bit-style). The images were simply created in GIMP and inspired by [](https://opengameart.org/content/pong-graphics) which is authored by [Deathsbreed](https://opengameart.org/users/deathsbreed).
+Let's first set up our working directory. Then, download the assets [here](/assets/tutorials/go/pong/assets.zip) and extract the content into the working directory. Credits to [Pixel Kitchen](https://www.fontspace.com/pixel-kitchen) for the [Satella Font](https://www.fontspace.com/satella-font-f40960) and [captaincrunch80](https://opengameart.org/users/captaincrunch80) for the [Pong sounds](https://opengameart.org/content/3-ping-pong-sounds-8-bit-style). The images were simply created in GIMP and inspired by [Pong Graphics](https://opengameart.org/content/pong-graphics) which is authored by [Deathsbreed](https://opengameart.org/users/deathsbreed).
 
 ## Creating the window
 
