@@ -181,17 +181,17 @@ body > .header .title small {
     font-weight: bold;
 }
 
-/* Lang */
+/* Tutorials: Lang */
 
 .section-tutorials-lang {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-gap: 1rem;
 }
 
 .section-tutorials-lang.section .header {
     margin: 1rem;
     padding: 2rem;
+    background: #fff;
     text-align: center;
     box-shadow: 0 0 8px #ddd;
     transition: box-shadow .2s ease;
@@ -201,18 +201,15 @@ body > .header .title small {
     box-shadow: 0 0 8px #ccc;
 }
 
-.section-tutorials-lang .page .header .poster-container .poster {
-    display: table-cell;
-    vertical-align: middle;
-    background: #EFF0FF;
-}
-
 .section-tutorials-lang .page .header .poster {
+    display: table-cell;
     width: 240px;
-    height: 160px;
-    border: 1px solid #555;
+    height: 135px;
+    vertical-align: middle;
     text-align: center;
-    color: #111;
+    background: #136993;
+    color: white;
+    font-weight: bold;
 }
 
 /* Resources */
