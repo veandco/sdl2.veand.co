@@ -6,7 +6,7 @@
             {% set subsection = get_section(path=subsection_name) %}
             <a href="{{ subsection.permalink }}">
                 <div class="header">
-                    <img class="poster" src="/images/{{ section.path }}{{ subsection.title | slugify }}.png" />
+                    <img class="poster" src="/images/{{ section.path }}{{ subsection.title | slugify }}.png" alt="{{ subsection.title }}" />
                     <p class="title">{{ subsection.title }}</p>
                 </div>
             </a>
