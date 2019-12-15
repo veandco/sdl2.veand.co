@@ -212,6 +212,40 @@ body > .header .title small {
     font-weight: bold;
 }
 
+/* Tutorials: Lang: Project */
+
+.section-tutorials-lang-project {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 1rem;
+}
+
+.section-tutorials-lang-project.section .header {
+    margin: 1rem;
+    padding: 2rem;
+    text-align: center;
+    box-shadow: 0 0 8px #ddd;
+    transition: box-shadow .2s ease;
+}
+
+.section-tutorials-lang-project.section .header:hover {
+    box-shadow: 0 0 8px #ccc;
+}
+
+.section-tutorials-lang-project .page .header .poster-container .poster {
+    display: table-cell;
+    vertical-align: middle;
+    background: #EFF0FF;
+}
+
+.section-tutorials-lang-project .page .header .poster {
+    width: 240px;
+    height: 160px;
+    border: 1px solid #555;
+    text-align: center;
+    color: #111;
+}
+
 /* Resources */
 
 .section-resources {
