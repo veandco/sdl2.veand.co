@@ -1,0 +1,13 @@
+{% extends "base.html" %} 
+{% block content %}
+    <div class="post">
+        <div class="header">
+            <div class="title">
+                <a href="{{ section.permalink }}">{{ section.title }}</a>
+            </div>
+        </div>
+        <div class="content">
+            {{ section.content | safe }}
+        </div>
+    </div>
+{% endblock content %}
