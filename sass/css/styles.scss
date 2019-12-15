@@ -171,8 +171,14 @@ body > .header .title small {
 }
 
 .section-tutorials .page .header .poster {
+    display: table-cell;
     width: 240px;
-    border: 1px solid #555;
+    height: 135px;
+    vertical-align: middle;
+    text-align: center;
+    background: $nav-bg-color;
+    color: white;
+    font-weight: bold;
 }
 
 /* Lang */
