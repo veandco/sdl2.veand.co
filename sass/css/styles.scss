@@ -1,12 +1,13 @@
 $nav-bg-color: #ff0060;
 $nav-bg-highlight-color: #CC0060;
+$fonts: "Open Sans", Helvetica, Arial, sans-serif;
 
 /***********
  * General *
  ***********/
 
 body {
-    font-family: "Open Sans", Helvetica, Arial, sans-serif;
+    font-family: $fonts;
     margin: 0;
 }
 
@@ -82,7 +83,7 @@ body > .header .title small {
 
 .nav {
 	width: 100%;
-	font-family: monospace;
+	font-family: $fonts;
 	background: $nav-bg-color;
 }
 
