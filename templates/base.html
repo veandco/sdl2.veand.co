@@ -9,27 +9,26 @@
 </head>
 <body>
     <div class="header">
-        <h1 class="title">
-            <a href="/">SDL2</a>
-            <small class="subtitle">Website is still under development. Final content and looks might change drastically!</small>
+        <h1 class="header__title">
+            <a class="header__link" href="/">SDL2</a>
         </h1>
     </div>
     <nav class="nav" role="navigation" aria-label="main">
-        <ul class="list">
-            <li class="item"><a class="link" href="/">Home</a></li>
-            <li class="item"><a class="link" href="/tutorials">Tutorials</a>
-		    <ul class="list dropdown">
-			    <li class="item"><a class="link" href="/tutorials/go">Go</a></li>
+        <ul class="nav__list">
+            <li class="nav__item"><a class="link" href="/">Home</a></li>
+            <li class="nav__item"><a class="link" href="/tutorials">Tutorials</a>
+		    <ul class="nav__list dropdown">
+			    <li class="nav__item"><a class="link" href="/tutorials/go">Go</a></li>
 		    </ul>
 	    </li>
-            <li class="item"><a class="link" href="/resources">Resources</a>
+            <li class="nav__item"><a class="link" href="/resources">Resources</a>
         </ul>
     </nav>
     <div class="content">
     {% block content %}{% endblock content %}
     </div>
     <div class="footer">
-        <p>This website is powered by <a href="https://getzola.org">Zola</a> and <a href="https://netlify.com">Netlify</a></p>
+        <p class="footer__content">This website is powered by <a class="footer__link" href="https://getzola.org">Zola</a> and <a href="https://netlify.com">Netlify</a></p>
     </div>
 </body>
 </html>

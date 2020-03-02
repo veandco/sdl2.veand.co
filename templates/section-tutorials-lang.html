@@ -5,9 +5,9 @@
         <div class="page">
             {% set subsection = get_section(path=subsection_name) %}
             <a href="{{ subsection.permalink }}">
-                <div class="header">
-                    <img class="poster" src="/images/{{ section.path }}{{ subsection.title | slugify }}.png" alt="{{ subsection.title }}" />
-                    <p class="title">{{ subsection.title }}</p>
+                <div class="page__header">
+                    <img class="page__poster" src="/images/{{ section.path }}{{ subsection.title | slugify }}.png" alt="{{ subsection.title }}" />
+                    <p class="page__title">{{ subsection.title }}</p>
                 </div>
             </a>
         </div>

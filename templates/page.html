@@ -1,12 +1,12 @@
 {% extends "base.html" %} 
 {% block content %}
     <div class="post">
-        <div class="header">
-            <div class="date">{{ page.date | date(format="%B %d, %Y") }}</div>
-            <div class="title">
+        <div class="post__header">
+            <div class="post__date">{{ page.date | date(format="%B %d, %Y") }}</div>
+            <div class="post__title">
                 <a href="{{ page.permalink }}">{{ page.title }}</a>
             </div>
         </div>
-        <div class="content">{{ page.content | safe }}</div>
+        <div class="post__content">{{ page.content | safe }}</div>
     </div>
 {% endblock content %}

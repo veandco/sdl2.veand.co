@@ -9,72 +9,33 @@ $fonts: "Open Sans", Helvetica, Arial, sans-serif;
 body {
     font-family: $fonts;
     margin: 0;
-}
 
-body > .header .title,
-body > .content {
-    padding: 2rem 1rem 2rem 1rem;
+    iframe {
+        width: 100%;
+    }
 }
 
 a {
+    color: #555;
     text-decoration: none;
 }
 
-a:link,
-a:visited {
-    color: #555;
-}
+/**********
+ * Header *
+ **********/
 
-
-body > .content {
-    max-width: 960px;
-    margin: 0 auto;
-    color: #333;
-}
-
-body > .footer {
+.header {
     background: #2c3e50;
-    padding: 1rem;
-}
 
-body > .footer p {
-    max-width: 960px;
-    margin: 0 auto;
-    color: #f7f7f7;
-}
+    .header__title {
+        margin: 0 auto 0 auto;
+        max-width: 960px;
+        padding: 2rem 1rem 2rem 1rem;
+    }
 
-body > .footer {
-	a:link,
-	a:visited {
-		color: #CCC;
-	}
-}
-
-body iframe {
-	width: 100%;
-}
-
-/********
- * Logo *
- ********/
-
-body > .header {
-    background: #2c3e50;
-}
-
-body > .header .title {
-    margin: 0 auto 0 auto;
-    max-width: 960px;
-}
-
-body > .header .title a {
-    color: #dfdfdf;
-}
-
-body > .header .title small {
-    color: #dfdfdf;
-    font-size: .75rem;
-    display: block;
+    .header__link {
+        color: #dfdfdf;
+    }
 }
 
 /******************
@@ -84,230 +45,209 @@ body > .header .title small {
 .nav {
 	width: 100%;
 	font-family: $fonts;
-	background: $nav-bg-color;
+    background: $nav-bg-color;
+
+    .nav__link {
+        text-decoration: none;
+    }
+
+    .nav__list {
+        list-style: none;
+        margin: 0 auto;
+        padding-left: 0;
+        max-width: 960px;
+        font-size: 0;
+
+        .nav__item {
+            display: block;
+            color: #fff;
+            background: $nav-bg-color;
+            display: inline-block;
+            position: relative;
+            text-decoration: none;
+            min-width: 7.5rem;
+            font-size: 1rem;
+            transition-duration: 0.5s;
+        }
+
+        .nav__item:hover,
+        .nav__item:focus-within {
+            background: $nav-bg-highlight-color;
+            cursor: pointer;
+        }
+
+        .nav__item a {
+            display: block;
+            height: 100%;
+            padding: 1rem;
+            color: #fff;
+        }
+
+        .nav__item .dropdown {
+            background: $nav-bg-color;
+            visibility: hidden;
+            opacity: 0;
+            position: absolute;
+            transition: all 0.5s ease;
+            left: 0;
+            display: none;
+        }
+
+        .nav__item:hover > .dropdown,
+        .nav__item:focus-within > .dropdown,
+        .nav__item .dropdown:hover {
+            visibility: visible;
+            opacity: 1;
+            display: block;
+        }
+
+        .nav__item .dropdown .list .item {
+            clear: both;
+            width: 100%;
+        }
+    }
+
 }
 
-.nav a {
-	text-decoration: none;
+/***********
+ * Content *
+ ***********/
+
+.content {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 2rem 1rem 2rem 1rem;
+    color: #333;
 }
 
-.nav .list {
-	list-style: none;
-	margin: 0 auto;
-	padding-left: 0;
-	max-width: 960px;
-	font-size: 0;
-}
-
-.nav .list .item {
-	display: block;
-	color: #fff;
-	background: $nav-bg-color;
-	display: inline-block;
-	position: relative;
-	text-decoration: none;
-	min-width: 7.5rem;
-	font-size: 1rem;
-	transition-duration: 0.5s;
-}
-
-.nav .list .item:hover,
-.nav .list .item:focus-within {
-	background: $nav-bg-highlight-color;
-	cursor: pointer;
-}
-
-.nav .list .item a {
-	display: block;
-	height: 100%;
-	padding: 1rem;
-	color: #fff;
-}
-
-.nav .list .item .dropdown {
-	background: $nav-bg-color;
-	visibility: hidden;
-	opacity: 0;
-	position: absolute;
-	transition: all 0.5s ease;
-	left: 0;
-	display: none;
-}
-
-.nav .list .item:hover > .dropdown,
-.nav .list .item:focus-within > .dropdown,
-.nav .list .item .dropdown:hover {
-	visibility: visible;
-	opacity: 1;
-	display: block;
-}
-
-.nav .list .item .dropdown .list .item {
-	clear: both;
-	width: 100%;
-}
-
-/*************
- * Section *
- *************/
-
-/* Tutorials */
+/**********************
+ * Section: Tutorials *
+ **********************/
 
 .section-tutorials {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+
+    .subsection__header {
+        margin: 1rem;
+        padding: 2rem;
+        background: #fff;
+        text-align: center;
+        box-shadow: 0 0 8px #ddd;
+        transition: box-shadow .2s ease;
+    }
+
+    .subsection__header:hover {
+        box-shadow: 0 0 8px #ccc;
+    }
 }
 
-.section-tutorials.section .header {
-    margin: 1rem;
-    padding: 2rem;
-    background: #fff;
-    text-align: center;
-    box-shadow: 0 0 8px #ddd;
-    transition: box-shadow .2s ease;
-}
-
-.section-tutorials.section .header:hover {
-    box-shadow: 0 0 8px #ccc;
-}
-
-.section-tutorials .page .header .poster {
-    display: table-cell;
-    width: 240px;
-    height: 135px;
-    vertical-align: middle;
-    text-align: center;
-    background: #136993;
-    color: white;
-    font-weight: bold;
-}
-
-/* Tutorials: Lang */
+/****************************
+ * Section: Tutorials: Lang *
+ ****************************/
 
 .section-tutorials-lang {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
     grid-gap: 1rem;
+
+    .page__poster {
+        display: table-cell;
+        width: 240px;
+        height: 135px;
+        vertical-align: middle;
+        text-align: center;
+        background: #136993;
+        color: white;
+        font-weight: bold;
+    }
 }
 
-.section-tutorials-lang.section .header {
-    margin: 1rem;
-    padding: 2rem;
-    background: #fff;
-    text-align: center;
-    box-shadow: 0 0 8px #ddd;
-    transition: box-shadow .2s ease;
-}
-
-.section-tutorials-lang.section .header:hover {
-    box-shadow: 0 0 8px #ccc;
-}
-
-.section-tutorials-lang .page .header .poster {
-    display: table-cell;
-    width: 240px;
-    height: 135px;
-    vertical-align: middle;
-    text-align: center;
-    background: #136993;
-    color: white;
-    font-weight: bold;
-}
-
-/* Tutorials: Lang: Project */
+/*************************************
+ * Section: Tutorials: Lang: Project *
+ *************************************/
 
 .section-tutorials-lang-project {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-gap: 1rem;
+
+    .page__poster {
+        display: table-cell;
+        color: #111;
+        background: #EFF0FF;
+        width: 240px;
+        height: 160px;
+        border: 1px solid #555;
+        text-align: center;
+        vertical-align: middle;
+    }
 }
 
-.section-tutorials-lang-project.section .header {
-    margin: 1rem;
-    padding: 2rem;
-    text-align: center;
-    box-shadow: 0 0 8px #ddd;
-    transition: box-shadow .2s ease;
-}
-
-.section-tutorials-lang-project.section .header:hover {
-    box-shadow: 0 0 8px #ccc;
-}
-
-.section-tutorials-lang-project .page .header .poster-container .poster {
-    display: table-cell;
-    vertical-align: middle;
-    background: #EFF0FF;
-}
-
-.section-tutorials-lang-project .page .header .poster {
-    width: 240px;
-    height: 160px;
-    border: 1px solid #555;
-    text-align: center;
-    color: #111;
-}
-
-/* Resources */
+/**********************
+ * Section: Resources *
+ **********************/
 
 .section-resources {
 	line-height: 1.5rem;
-}
-
-.section-resources.section .header {
-    margin: 1rem;
-    padding: 2rem;
-    background: #fff;
-    text-align: center;
-    box-shadow: 0 0 8px #ddd;
-    transition: box-shadow .2s ease;
-}
-
-.section-resources.section .header:hover {
-    box-shadow: 0 0 8px #ccc;
-}
-
-.section-resources .page .header .poster {
-    width: 240px;
-    border: 1px solid #555;
 }
 
 /********
  * Post *
  ********/
 
-.post .header .date {
+.post__date {
     color: #bbb;
     font-weight: bold;
     font-size: .75rem;
     text-transform: uppercase;
 }
 
-.post .header .title {
+.post__title {
     font-size: 2rem;
     font-weight: bold;
     display: inline-block;
 }
 
-.post .header .title a {
+.post__title a {
     color: #2c3e50;
 }
 
-.post .content {
+.post__content {
     line-height: 1.75rem;
 }
 
-.post .content h2 {
+.post__content h2 {
     margin-top: 3rem;
 }
 
-.post .content a {
+.post__content a {
     font-weight: bold;
 }
 
-.post .content pre {
+.post__content pre {
     line-height: 1.25rem;
     padding: 1rem;
     overflow-x: auto;
     font-family: 'SF Mono', monospace;
+}
+
+/**********
+ * Footer *
+ **********/
+
+.footer {
+    background: #2c3e50;
+    padding: 1rem;
+
+    .footer__content {
+        max-width: 960px;
+        margin: 0 auto;
+        color: #f7f7f7;
+    }
+
+	.footer__link:link,
+	.footer__link:visited {
+		color: #CCC;
+	}
 }

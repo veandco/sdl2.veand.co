@@ -4,9 +4,9 @@
         <div class="section-tutorials section">
             {% set subsection = get_section(path=subsection_md) %}
             <a href="{{ subsection.permalink }}">
-                <div class="header">
-                    <img class="poster" src="/images/{{ section.path }}{{ subsection.title }}.svg">
-                    <p class="title">{{ subsection.title }}</p>
+                <div class="subsection__header">
+                    <img class="subsection__poster" src="/images/{{ section.path }}{{ subsection.title }}.svg">
+                    <p class="subsection__title">{{ subsection.title }}</p>
                 </div>
             </a>
         </div>
